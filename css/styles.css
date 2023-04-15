@@ -177,6 +177,10 @@ img {
 
   background-color: var(--primary-brand-color);
 }
+
+.media-icon {
+  fill: var(--light-color);
+}
 /* ======= HEADER STYLES ======= */
 
 .menu-link {
@@ -209,6 +213,9 @@ img {
 
 .header {
   border-bottom: 1px solid var(--accent-color);
+
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -241,9 +248,12 @@ img {
 .hero-section {
   padding-top: 188px;
   padding-bottom: 188px;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 1440px;
 
   background-color: var(--dark-color);
-
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -306,6 +316,8 @@ img {
 
 .advantages-icon-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   padding-top: 24px;
   padding-bottom: 24px;
@@ -363,7 +375,7 @@ img {
 }
 
 .card-text {
-  padding: 32px 16px;
+  padding: 32px 0;
   text-align: center;
 
   border-radius: 0px 0px 4px 4px;
@@ -373,16 +385,12 @@ img {
   margin-bottom: 8px;
 }
 
-.team-section .media-icon {
-  width: 16px;
-  height: 16px;
-}
-
 .team-section .media-list {
   gap: 24px;
 }
 
-.team-card:hover .media-link {
+.team-card:hover .media-link,
+.team-card:focus .media-link {
   background-color: var(--pressed-state-color);
 }
 
@@ -492,12 +500,20 @@ img {
   border-top: transparent;
 }
 
+.portfolio-card-link {
+  display: block;
+}
+
+.portfolio-card-link:hover,
+.portfolio-card-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .portfolio-card-link:hover .portfolio-card-text,
 .portfolio-card-link:focus .portfolio-card-text {
   border: 1px solid var(--light-color);
   border-top: transparent;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-card {
@@ -514,7 +530,6 @@ img {
 
 .footer-text {
   width: 264px;
-  margin-right: 120px;
 
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -532,16 +547,14 @@ img {
 
   font-weight: 500;
   line-height: 1.5;
+  letter-spacing: 0.02em;
   color: var(--white-bg-color);
 }
 
 .footer .container {
   display: flex;
-}
-
-.footer .media-icon {
-  width: 24px;
-  height: 24px;
+  align-items: baseline;
+  gap: 120px;
 }
 
 .footer .media-list {
