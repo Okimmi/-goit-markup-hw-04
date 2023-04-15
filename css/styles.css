@@ -421,7 +421,7 @@ img {
 }
 
 .customer-logo-link:hover,
-.customer-logo-link:active {
+.customer-logo-link:focus {
   color: var(--pressed-state-color);
   border-color: var(--pressed-state-color);
 }
